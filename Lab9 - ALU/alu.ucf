@@ -1,0 +1,34 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "DAT_B[7]" LOC = P112;
+NET "DAT_B[6]" LOC = P111;
+NET "DAT_B[5]" LOC = P105;
+NET "DAT_B[4]" LOC = P104;
+NET "DAT_B[3]" LOC = P102;
+NET "DAT_B[2]" LOC = P101;
+NET "DAT_B[1]" LOC = P100;
+NET "DAT_B[0]" LOC = P99;
+NET "DAT_A[0]" LOC = P66;
+NET "DAT_A[1]" LOC = P62;
+NET "DAT_A[2]" LOC = P61;
+NET "DAT_A[3]" LOC = P59;
+NET "DAT_A[4]" LOC = P58;
+NET "DAT_A[5]" LOC = P57;
+NET "DAT_A[6]" LOC = P56;
+NET "DAT_A[7]" LOC = P55;
+NET "A" LOC = P41;
+NET "B" LOC = P40;
+NET "C" LOC = P35;
+NET "CLK" LOC = P123;
+NET "Common0" LOC = P44;
+NET "Common1" LOC = P43;
+NET "D" LOC = P34;
+NET "E" LOC = P32;
+NET "F" LOC = P29;
+NET "G" LOC = P27;
+NET "toggleMode" LOC = P45;
+NET "LED0" LOC = P82;
+NET "LED1" LOC = P81;
+NET "LED2" LOC = P80;
+NET "LED3" LOC = P79;

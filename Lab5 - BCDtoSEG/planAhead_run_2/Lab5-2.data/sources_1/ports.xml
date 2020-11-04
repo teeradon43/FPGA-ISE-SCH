@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="Clock" Dir="IN"/>
+		<Port Id="Set_0" Dir="IN"/>
+		<Port Id="Set_1" Dir="IN"/>
+		<Port Id="a_7seg" Dir="OUT"/>
+		<Port Id="b_7seg" Dir="OUT"/>
+		<Port Id="c_7seg" Dir="OUT"/>
+		<Port Id="d_7seg" Dir="OUT"/>
+		<Port Id="e_7seg" Dir="OUT"/>
+		<Port Id="f_7seg" Dir="OUT"/>
+		<Port Id="g_7seg" Dir="OUT"/>
+		<Port Id="KCom_7seg" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

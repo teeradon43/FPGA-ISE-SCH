@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym twoBitCounter {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/twoBitCounter.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/twoBitCounter.sym} 

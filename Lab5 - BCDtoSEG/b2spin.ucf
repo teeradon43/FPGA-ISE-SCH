@@ -1,0 +1,14 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "c_7seg" LOC = P35;
+NET "b_7seg" LOC = P40;
+NET "a_7seg" LOC = P41;
+NET "KCom_7seg" LOC = P44;
+NET "Set_0" LOC = P62;
+NET "Set_1" LOC = P66;
+NET "g_7seg" LOC = P27;
+NET "f_7seg" LOC = P29;
+NET "e_7seg" LOC = P32;
+NET "d_7seg" LOC = P34;
+NET "Clock" LOC = P51;

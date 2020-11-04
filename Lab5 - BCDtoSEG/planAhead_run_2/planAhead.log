@@ -1,0 +1,125 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Oct 08 14:29:46 2020
+# Process ID: 11232
+# Log file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/planAhead_run_2/planAhead.log
+# Journal file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/pa.fromHdl.tcl}
+# create_project -name Lab5-2 -dir "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/planAhead_run_2" -part xc6slx9tqg144-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2spin.ucf" [current_fileset -constrset]
+Adding file 'D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2spin.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {b2s.vf}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top b2s $srcset
+# add_files [list {b2spin.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {b2s.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx9tqg144-3
+Using Verific elaboration
+Parsing VHDL file "D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.vf" into library work
+Loading clock regions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2spin.ucf]
+Finished Parsing UCF File [D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2spin.ucf]
+Parsing UCF File [D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.ucf]
+Finished Parsing UCF File [D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 8c17094b
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P41 [get_ports a_7seg]
+endgroup
+set_property is_loc_fixed false [get_ports [list  a_7seg]]
+startgroup
+set_property package_pin P40 [get_ports b_7seg]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports c_7seg]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports Clock]
+endgroup
+set_property is_loc_fixed false [get_ports [list  b_7seg]]
+set_property is_loc_fixed true [get_ports [list  b_7seg]]
+set_property is_loc_fixed false [get_ports [list  b_7seg]]
+set_property package_pin "" [get_ports [list  e_7seg]]
+startgroup
+set_property package_pin P32 [get_ports d_7seg]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports e_7seg]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports f_7seg]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports g_7seg]
+endgroup
+set_property is_loc_fixed true [get_ports [list  b_7seg]]
+set_property is_loc_fixed true [get_ports [list  a_7seg]]
+startgroup
+set_property package_pin P44 [get_ports KCom_7seg]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports Set_0]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports Set_1]
+endgroup
+set_property package_pin "" [get_ports [list  Clock]]
+startgroup
+set_property package_pin P32 [get_ports d_7seg]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports e_7seg]
+endgroup
+set_property package_pin "" [get_ports [list  d_7seg]]
+set_property package_pin "" [get_ports [list  e_7seg]]
+set_property package_pin "" [get_ports [list  f_7seg]]
+startgroup
+set_property package_pin P27 [get_ports g_7seg]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports f_7seg]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports e_7seg]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports d_7seg]
+endgroup
+save_constraints
+startgroup
+set_property package_pin P51 [get_ports Clock]
+endgroup
+set_property is_loc_fixed false [get_ports [list  Clock]]
+set_property is_loc_fixed true [get_ports [list  Clock]]
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2\planAhead_pid11232.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Oct 08 14:35:20 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

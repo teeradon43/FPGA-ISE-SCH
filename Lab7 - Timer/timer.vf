@@ -1,0 +1,318 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : timer.vf
+// /___/   /\     Timestamp : 11/03/2020 00:27:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/timer.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/timer.sch"
+//Design Name: timer
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_timer(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module jkCounter0to5_MUSER_timer(CLK_IN, 
+                                 CLR, 
+                                 A, 
+                                 B, 
+                                 C);
+
+    input CLK_IN;
+    input CLR;
+   output A;
+   output B;
+   output C;
+   
+   wire XLXN_6;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_74;
+   wire XLXN_75;
+   wire A_DUMMY;
+   wire B_DUMMY;
+   wire C_DUMMY;
+   
+   assign A = A_DUMMY;
+   assign B = B_DUMMY;
+   assign C = C_DUMMY;
+   (* HU_SET = "XLXI_1_2" *) 
+   FJKC_HXILINX_timer  XLXI_1 (.C(CLK_IN), 
+                              .CLR(CLR), 
+                              .J(XLXN_6), 
+                              .K(XLXN_6), 
+                              .Q(A_DUMMY));
+   VCC  XLXI_3 (.P(XLXN_6));
+   (* HU_SET = "XLXI_13_1" *) 
+   FJKC_HXILINX_timer  XLXI_13 (.C(CLK_IN), 
+                               .CLR(CLR), 
+                               .J(XLXN_68), 
+                               .K(XLXN_68), 
+                               .Q(B_DUMMY));
+   (* HU_SET = "XLXI_14_0" *) 
+   FJKC_HXILINX_timer  XLXI_14 (.C(CLK_IN), 
+                               .CLR(CLR), 
+                               .J(XLXN_69), 
+                               .K(XLXN_75), 
+                               .Q(C_DUMMY));
+   AND2  XLXI_15 (.I0(XLXN_74), 
+                 .I1(A_DUMMY), 
+                 .O(XLXN_68));
+   AND2  XLXI_16 (.I0(A_DUMMY), 
+                 .I1(C_DUMMY), 
+                 .O(XLXN_75));
+   AND2  XLXI_17 (.I0(B_DUMMY), 
+                 .I1(A_DUMMY), 
+                 .O(XLXN_69));
+   INV  XLXI_36 (.I(C_DUMMY), 
+                .O(XLXN_74));
+endmodule
+`timescale 1ns / 1ps
+
+module jkCounter0to9_MUSER_timer(CLK_IN, 
+                                 CLR, 
+                                 A, 
+                                 B, 
+                                 C, 
+                                 D);
+
+    input CLK_IN;
+    input CLR;
+   output A;
+   output B;
+   output C;
+   output D;
+   
+   wire XLXN_8;
+   wire XLXN_15;
+   wire XLXN_17;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_50;
+   wire XLXN_52;
+   wire A_DUMMY;
+   wire B_DUMMY;
+   wire C_DUMMY;
+   wire D_DUMMY;
+   
+   assign A = A_DUMMY;
+   assign B = B_DUMMY;
+   assign C = C_DUMMY;
+   assign D = D_DUMMY;
+   (* HU_SET = "XLXI_1_3" *) 
+   FJKC_HXILINX_timer  XLXI_1 (.C(CLK_IN), 
+                              .CLR(CLR), 
+                              .J(XLXN_8), 
+                              .K(XLXN_8), 
+                              .Q(A_DUMMY));
+   (* HU_SET = "XLXI_2_4" *) 
+   FJKC_HXILINX_timer  XLXI_2 (.C(CLK_IN), 
+                              .CLR(CLR), 
+                              .J(XLXN_15), 
+                              .K(XLXN_15), 
+                              .Q(B_DUMMY));
+   (* HU_SET = "XLXI_3_5" *) 
+   FJKC_HXILINX_timer  XLXI_3 (.C(CLK_IN), 
+                              .CLR(CLR), 
+                              .J(XLXN_47), 
+                              .K(XLXN_47), 
+                              .Q(C_DUMMY));
+   (* HU_SET = "XLXI_4_6" *) 
+   FJKC_HXILINX_timer  XLXI_4 (.C(CLK_IN), 
+                              .CLR(CLR), 
+                              .J(XLXN_50), 
+                              .K(XLXN_52), 
+                              .Q(D_DUMMY));
+   INV  XLXI_5 (.I(D_DUMMY), 
+               .O(XLXN_17));
+   VCC  XLXI_7 (.P(XLXN_8));
+   AND2  XLXI_8 (.I0(XLXN_17), 
+                .I1(A_DUMMY), 
+                .O(XLXN_15));
+   AND2  XLXI_9 (.I0(B_DUMMY), 
+                .I1(A_DUMMY), 
+                .O(XLXN_47));
+   AND2  XLXI_10 (.I0(B_DUMMY), 
+                 .I1(A_DUMMY), 
+                 .O(XLXN_48));
+   AND2  XLXI_11 (.I0(C_DUMMY), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_50));
+   AND2  XLXI_12 (.I0(A_DUMMY), 
+                 .I1(D_DUMMY), 
+                 .O(XLXN_52));
+endmodule
+`timescale 1ns / 1ps
+
+module timer(CLEAR, 
+             CLK_IN, 
+             A0, 
+             A1, 
+             A2, 
+             A3, 
+             B0, 
+             B1, 
+             B2, 
+             B3, 
+             C0, 
+             C1, 
+             C2, 
+             C3, 
+             D0, 
+             D1, 
+             D2, 
+             D3);
+
+    input CLEAR;
+    input CLK_IN;
+   output A0;
+   output A1;
+   output A2;
+   output A3;
+   output B0;
+   output B1;
+   output B2;
+   output B3;
+   output C0;
+   output C1;
+   output C2;
+   output C3;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   
+   wire XLXN_13;
+   wire XLXN_16;
+   wire XLXN_32;
+   wire XLXN_50;
+   wire XLXN_51;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_60;
+   wire XLXN_61;
+   wire A0_DUMMY;
+   wire A1_DUMMY;
+   wire A2_DUMMY;
+   wire A3_DUMMY;
+   wire B0_DUMMY;
+   wire B1_DUMMY;
+   wire B2_DUMMY;
+   wire C0_DUMMY;
+   wire C1_DUMMY;
+   wire C2_DUMMY;
+   wire C3_DUMMY;
+   
+   assign A0 = A0_DUMMY;
+   assign A1 = A1_DUMMY;
+   assign A2 = A2_DUMMY;
+   assign A3 = A3_DUMMY;
+   assign B0 = B0_DUMMY;
+   assign B1 = B1_DUMMY;
+   assign B2 = B2_DUMMY;
+   assign C0 = C0_DUMMY;
+   assign C1 = C1_DUMMY;
+   assign C2 = C2_DUMMY;
+   assign C3 = C3_DUMMY;
+   jkCounter0to5_MUSER_timer  XLXI_1 (.CLK_IN(XLXN_51), 
+                                     .CLR(CLEAR), 
+                                     .A(B0_DUMMY), 
+                                     .B(B1_DUMMY), 
+                                     .C(B2_DUMMY));
+   jkCounter0to9_MUSER_timer  XLXI_2 (.CLK_IN(CLK_IN), 
+                                     .CLR(CLEAR), 
+                                     .A(A0_DUMMY), 
+                                     .B(A1_DUMMY), 
+                                     .C(A2_DUMMY), 
+                                     .D(A3_DUMMY));
+   AND2  XLXI_6 (.I0(XLXN_51), 
+                .I1(XLXN_13), 
+                .O(XLXN_16));
+   FD_1 #( .INIT(1'b0) ) XLXI_16 (.C(CLK_IN), 
+                 .D(XLXN_50), 
+                 .Q(XLXN_51));
+   AND2  XLXI_17 (.I0(CLK_IN), 
+                 .I1(XLXN_32), 
+                 .O(XLXN_50));
+   AND2  XLXI_22 (.I0(XLXN_58), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_60));
+   FD_1 #( .INIT(1'b0) ) XLXI_24 (.C(XLXN_58), 
+                 .D(XLXN_60), 
+                 .Q(XLXN_61));
+   FD_1 #( .INIT(1'b0) ) XLXI_27 (.C(XLXN_51), 
+                 .D(XLXN_16), 
+                 .Q(XLXN_58));
+   XNOR4  XLXI_30 (.I0(A3_DUMMY), 
+                  .I1(A0_DUMMY), 
+                  .I2(A1_DUMMY), 
+                  .I3(A2_DUMMY), 
+                  .O(XLXN_32));
+   GND  XLXI_32 (.G(B3));
+   XNOR3  XLXI_33 (.I0(B2_DUMMY), 
+                  .I1(B1_DUMMY), 
+                  .I2(B0_DUMMY), 
+                  .O(XLXN_13));
+   jkCounter0to9_MUSER_timer  XLXI_34 (.CLK_IN(XLXN_58), 
+                                      .CLR(CLEAR), 
+                                      .A(C0_DUMMY), 
+                                      .B(C1_DUMMY), 
+                                      .C(C2_DUMMY), 
+                                      .D(C3_DUMMY));
+   XNOR4  XLXI_37 (.I0(C3_DUMMY), 
+                  .I1(C0_DUMMY), 
+                  .I2(C1_DUMMY), 
+                  .I3(C2_DUMMY), 
+                  .O(XLXN_57));
+   jkCounter0to5_MUSER_timer  XLXI_38 (.CLK_IN(XLXN_61), 
+                                      .CLR(CLEAR), 
+                                      .A(D0), 
+                                      .B(D1), 
+                                      .C(D2));
+   GND  XLXI_39 (.G(D3));
+endmodule

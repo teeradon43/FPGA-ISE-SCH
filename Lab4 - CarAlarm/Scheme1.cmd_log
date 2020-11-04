@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.xst" -ofn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "Scheme1.ngc" Scheme1.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Scheme1_map.ncd Scheme1.ngd Scheme1.pcf 
+par -w -intstyle ise -ol high -mt off Scheme1_map.ncd Scheme1.ncd Scheme1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Scheme1.twx Scheme1.ncd -o Scheme1.twr Scheme1.pcf 
+xst -intstyle ise -ifn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.xst" -ofn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ImpCon1.ucf -uc Scheme1.ucf -p xc6slx9-tqg144-3 "Scheme1.ngc" Scheme1.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Scheme1_map.ncd Scheme1.ngd Scheme1.pcf 
+par -w -intstyle ise -ol high -mt off Scheme1_map.ncd Scheme1.ncd Scheme1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Scheme1.twx Scheme1.ncd -o Scheme1.twr Scheme1.pcf -ucf ImpCon1.ucf -ucf Scheme1.ucf 
+bitgen -intstyle ise -f Scheme1.ut Scheme1.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.xst" -ofn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ImpCon1.ucf -uc Scheme1.ucf -p xc6slx9-tqg144-3 "Scheme1.ngc" Scheme1.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Scheme1_map.ncd Scheme1.ngd Scheme1.pcf 
+par -w -intstyle ise -ol high -mt off Scheme1_map.ncd Scheme1.ncd Scheme1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Scheme1.twx Scheme1.ncd -o Scheme1.twr Scheme1.pcf -ucf ImpCon1.ucf -ucf Scheme1.ucf 
+bitgen -intstyle ise -f Scheme1.ut Scheme1.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.xst" -ofn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.syr" 
+xst -intstyle ise -ifn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.xst" -ofn "D:/CE/2-1/Digital Logic/Lab/Lab4/Scheme1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ImpCon1.ucf -uc Scheme1.ucf -p xc6slx9-tqg144-3 "Scheme1.ngc" Scheme1.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Scheme1_map.ncd Scheme1.ngd Scheme1.pcf 
+par -w -intstyle ise -ol high -mt off Scheme1_map.ncd Scheme1.ncd Scheme1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Scheme1.twx Scheme1.ncd -o Scheme1.twr Scheme1.pcf -ucf ImpCon1.ucf -ucf Scheme1.ucf 
+bitgen -intstyle ise -f Scheme1.ut Scheme1.ncd 

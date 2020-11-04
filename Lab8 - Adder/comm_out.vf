@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : comm_out.vf
+// /___/   /\     Timestamp : 10/29/2020 14:56:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab08/comm_out.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab08/comm_out.sch"
+//Design Name: comm_out
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_comm_out(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module comm_out(CLK, 
+                Common0, 
+                Common1, 
+                Common2, 
+                Common3);
+
+    input CLK;
+   output Common0;
+   output Common1;
+   output Common2;
+   output Common3;
+   
+   wire XLXN_21;
+   wire XLXN_23;
+   wire XLXN_34;
+   wire XLXN_37;
+   
+   (* HU_SET = "XLXI_7_1" *) 
+   FTC_HXILINX_comm_out  XLXI_7 (.C(CLK), 
+                                .CLR(XLXN_21), 
+                                .T(XLXN_23), 
+                                .Q(XLXN_37));
+   (* HU_SET = "XLXI_8_0" *) 
+   FTC_HXILINX_comm_out  XLXI_8 (.C(CLK), 
+                                .CLR(XLXN_21), 
+                                .T(XLXN_37), 
+                                .Q(XLXN_34));
+   GND  XLXI_11 (.G(XLXN_21));
+   INV  XLXI_12 (.I(XLXN_21), 
+                .O(XLXN_23));
+   OR2  XLXI_25 (.I0(XLXN_34), 
+                .I1(XLXN_37), 
+                .O(Common0));
+   OR2B1  XLXI_31 (.I0(XLXN_37), 
+                  .I1(XLXN_34), 
+                  .O(Common1));
+   OR2B1  XLXI_32 (.I0(XLXN_34), 
+                  .I1(XLXN_37), 
+                  .O(Common2));
+   OR2B2  XLXI_33 (.I0(XLXN_34), 
+                  .I1(XLXN_37), 
+                  .O(Common3));
+endmodule

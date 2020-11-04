@@ -1,0 +1,12 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/Mux16.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/Mux16.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/arith.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/arith.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/demux1to4.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/demux1to4.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/twoBitCounter.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/twoBitCounter.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/BCD_0_F_Decoder.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/BCD_0_F_Decoder.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/alu.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/alu.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/ClockDivider.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/ClockDivider.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/shift_state.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/shift_state.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/MUX4.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/MUX4.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/xor_state.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/xor_state.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/demux1to4.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/demux1to4.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/alu.vf,-w,D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/alu.sch

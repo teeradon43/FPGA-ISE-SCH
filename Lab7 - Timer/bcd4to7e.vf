@@ -1,0 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bcd4to7e.vf
+// /___/   /\     Timestamp : 11/02/2020 22:11:54
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/bcd4to7e.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/bcd4to7e.sch"
+//Design Name: bcd4to7e
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module bcd4to7e(A, 
+                B, 
+                C, 
+                D, 
+                e_seg);
+
+    input A;
+    input B;
+    input C;
+    input D;
+   output e_seg;
+   
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   AND2  XLXI_1 (.I0(D), 
+                .I1(B), 
+                .O(XLXN_14));
+   AND2  XLXI_2 (.I0(D), 
+                .I1(C), 
+                .O(XLXN_15));
+   AND2B1  XLXI_3 (.I0(A), 
+                  .I1(B), 
+                  .O(XLXN_13));
+   AND2B2  XLXI_4 (.I0(C), 
+                  .I1(A), 
+                  .O(XLXN_12));
+   OR4  XLXI_5 (.I0(XLXN_15), 
+               .I1(XLXN_14), 
+               .I2(XLXN_13), 
+               .I3(XLXN_12), 
+               .O(e_seg));
+endmodule

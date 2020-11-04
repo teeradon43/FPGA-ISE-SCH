@@ -1,0 +1,115 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : demux1to4_drc.vf
+// /___/   /\     Timestamp : 11/04/2020 13:07:30
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog demux1to4_drc.vf -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/demux1to4.sch"
+//Design Name: demux1to4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_demux1to4(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module twoBitCounter_MUSER_demux1to4(CLK_IN, 
+                                     OUT0, 
+                                     OUT1);
+
+    input CLK_IN;
+   output OUT0;
+   output OUT1;
+   
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire OUT0_DUMMY;
+   
+   assign OUT0 = OUT0_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FTC_HXILINX_demux1to4  XLXI_1 (.C(CLK_IN), 
+                                 .CLR(XLXN_8), 
+                                 .T(XLXN_11), 
+                                 .Q(OUT0_DUMMY));
+   (* HU_SET = "XLXI_2_1" *) 
+   FTC_HXILINX_demux1to4  XLXI_2 (.C(XLXN_4), 
+                                 .CLR(XLXN_8), 
+                                 .T(XLXN_11), 
+                                 .Q(OUT1));
+   VCC  XLXI_3 (.P(XLXN_11));
+   INV  XLXI_4 (.I(OUT0_DUMMY), 
+               .O(XLXN_4));
+   INV  XLXI_9 (.I(XLXN_11), 
+               .O(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module demux1to4(C_IN, 
+                 OUT0, 
+                 OUT1, 
+                 OUT2, 
+                 OUT3);
+
+    input C_IN;
+   output OUT0;
+   output OUT1;
+   output OUT2;
+   output OUT3;
+   
+   wire XLXN_2;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_25;
+   
+   twoBitCounter_MUSER_demux1to4  XLXI_1 (.CLK_IN(C_IN), 
+                                         .OUT0(XLXN_2), 
+                                         .OUT1(XLXN_25));
+   INV  XLXI_2 (.I(XLXN_2), 
+               .O(XLXN_18));
+   INV  XLXI_3 (.I(XLXN_25), 
+               .O(XLXN_19));
+   AND2  XLXI_12 (.I0(XLXN_19), 
+                 .I1(XLXN_18), 
+                 .O(OUT0));
+   AND2  XLXI_13 (.I0(XLXN_19), 
+                 .I1(XLXN_2), 
+                 .O(OUT1));
+   AND2  XLXI_14 (.I0(XLXN_25), 
+                 .I1(XLXN_18), 
+                 .O(OUT2));
+   AND2  XLXI_15 (.I0(XLXN_25), 
+                 .I1(XLXN_2), 
+                 .O(OUT3));
+endmodule

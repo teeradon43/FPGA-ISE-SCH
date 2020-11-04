@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Oct 29 14:58:37 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "P30" LOCATE = SITE "P30" LEVEL 1;
+COMP "P40" LOCATE = SITE "P40" LEVEL 1;
+COMP "P32" LOCATE = SITE "P32" LEVEL 1;
+COMP "P41" LOCATE = SITE "P41" LEVEL 1;
+COMP "P33" LOCATE = SITE "P33" LEVEL 1;
+COMP "P34" LOCATE = SITE "P34" LEVEL 1;
+COMP "P43" LOCATE = SITE "P43" LEVEL 1;
+COMP "P35" LOCATE = SITE "P35" LEVEL 1;
+COMP "P27" LOCATE = SITE "P27" LEVEL 1;
+COMP "P44" LOCATE = SITE "P44" LEVEL 1;
+COMP "P29" LOCATE = SITE "P29" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P123" LEVEL 1;
+PIN CLK_pin<0> = BEL "CLK" PINNAME PAD;
+PIN "CLK_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+SCHEMATIC END;
+

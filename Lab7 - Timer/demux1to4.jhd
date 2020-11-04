@@ -1,0 +1,3 @@
+MODULE demux1to4
+	SUBMODULE twoBitCounter
+		INSTANCE XLXI_1

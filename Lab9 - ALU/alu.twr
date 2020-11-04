@@ -1,0 +1,197 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf alu.ucf
+
+Design file:              alu.ncd
+Physical constraint file: alu.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock toggleMode to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+A           |        19.649(F)|      SLOW  |         8.801(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+B           |        19.266(F)|      SLOW  |         8.816(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+C           |        19.120(F)|      SLOW  |         8.634(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+D           |        19.148(F)|      SLOW  |         8.652(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+E           |        19.328(F)|      SLOW  |         8.736(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+F           |        19.243(F)|      SLOW  |         8.513(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+G           |        19.082(F)|      SLOW  |         8.364(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+LED0        |        11.590(F)|      SLOW  |         6.580(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+LED1        |        11.374(F)|      SLOW  |         6.481(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+LED2        |        11.249(F)|      SLOW  |         6.394(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+LED3        |        11.781(F)|      SLOW  |         6.701(F)|      FAST  |toggleMode_BUFGP  |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    0.903|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock toggleMode
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+toggleMode     |         |         |         |    0.978|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DAT_A<0>       |A              |   15.635|
+DAT_A<0>       |B              |   15.252|
+DAT_A<0>       |C              |   15.106|
+DAT_A<0>       |D              |   15.134|
+DAT_A<0>       |E              |   15.314|
+DAT_A<0>       |F              |   15.229|
+DAT_A<0>       |G              |   15.068|
+DAT_A<1>       |A              |   15.394|
+DAT_A<1>       |B              |   15.011|
+DAT_A<1>       |C              |   14.865|
+DAT_A<1>       |D              |   14.893|
+DAT_A<1>       |E              |   15.073|
+DAT_A<1>       |F              |   14.988|
+DAT_A<1>       |G              |   14.827|
+DAT_A<2>       |A              |   15.526|
+DAT_A<2>       |B              |   15.143|
+DAT_A<2>       |C              |   14.997|
+DAT_A<2>       |D              |   15.025|
+DAT_A<2>       |E              |   15.205|
+DAT_A<2>       |F              |   15.120|
+DAT_A<2>       |G              |   14.959|
+DAT_A<3>       |A              |   14.971|
+DAT_A<3>       |B              |   14.588|
+DAT_A<3>       |C              |   14.442|
+DAT_A<3>       |D              |   14.470|
+DAT_A<3>       |E              |   14.650|
+DAT_A<3>       |F              |   14.565|
+DAT_A<3>       |G              |   14.404|
+DAT_A<4>       |A              |   15.134|
+DAT_A<4>       |B              |   14.825|
+DAT_A<4>       |C              |   14.739|
+DAT_A<4>       |D              |   14.633|
+DAT_A<4>       |E              |   14.774|
+DAT_A<4>       |F              |   14.689|
+DAT_A<4>       |G              |   14.528|
+DAT_A<5>       |A              |   15.021|
+DAT_A<5>       |B              |   14.730|
+DAT_A<5>       |C              |   14.644|
+DAT_A<5>       |D              |   14.520|
+DAT_A<5>       |E              |   14.262|
+DAT_A<5>       |F              |   14.436|
+DAT_A<5>       |G              |   14.267|
+DAT_A<6>       |A              |   14.708|
+DAT_A<6>       |B              |   14.502|
+DAT_A<6>       |C              |   14.416|
+DAT_A<6>       |D              |   14.207|
+DAT_A<6>       |E              |   14.034|
+DAT_A<6>       |F              |   14.123|
+DAT_A<6>       |G              |   14.039|
+DAT_A<7>       |A              |   14.171|
+DAT_A<7>       |B              |   13.931|
+DAT_A<7>       |C              |   13.845|
+DAT_A<7>       |D              |   13.670|
+DAT_A<7>       |E              |   13.625|
+DAT_A<7>       |F              |   13.586|
+DAT_A<7>       |G              |   13.615|
+DAT_B<0>       |A              |   15.757|
+DAT_B<0>       |B              |   15.374|
+DAT_B<0>       |C              |   15.228|
+DAT_B<0>       |D              |   15.256|
+DAT_B<0>       |E              |   15.436|
+DAT_B<0>       |F              |   15.351|
+DAT_B<0>       |G              |   15.190|
+DAT_B<1>       |A              |   15.883|
+DAT_B<1>       |B              |   15.500|
+DAT_B<1>       |C              |   15.354|
+DAT_B<1>       |D              |   15.382|
+DAT_B<1>       |E              |   15.562|
+DAT_B<1>       |F              |   15.477|
+DAT_B<1>       |G              |   15.316|
+DAT_B<2>       |A              |   15.871|
+DAT_B<2>       |B              |   15.488|
+DAT_B<2>       |C              |   15.342|
+DAT_B<2>       |D              |   15.370|
+DAT_B<2>       |E              |   15.550|
+DAT_B<2>       |F              |   15.465|
+DAT_B<2>       |G              |   15.304|
+DAT_B<3>       |A              |   15.816|
+DAT_B<3>       |B              |   15.433|
+DAT_B<3>       |C              |   15.287|
+DAT_B<3>       |D              |   15.315|
+DAT_B<3>       |E              |   15.495|
+DAT_B<3>       |F              |   15.410|
+DAT_B<3>       |G              |   15.249|
+DAT_B<4>       |A              |   15.614|
+DAT_B<4>       |B              |   15.305|
+DAT_B<4>       |C              |   15.219|
+DAT_B<4>       |D              |   15.113|
+DAT_B<4>       |E              |   15.254|
+DAT_B<4>       |F              |   15.169|
+DAT_B<4>       |G              |   15.008|
+DAT_B<5>       |A              |   15.675|
+DAT_B<5>       |B              |   15.384|
+DAT_B<5>       |C              |   15.298|
+DAT_B<5>       |D              |   15.174|
+DAT_B<5>       |E              |   14.916|
+DAT_B<5>       |F              |   15.090|
+DAT_B<5>       |G              |   14.921|
+DAT_B<6>       |A              |   15.286|
+DAT_B<6>       |B              |   15.080|
+DAT_B<6>       |C              |   14.994|
+DAT_B<6>       |D              |   14.785|
+DAT_B<6>       |E              |   14.612|
+DAT_B<6>       |F              |   14.701|
+DAT_B<6>       |G              |   14.617|
+DAT_B<7>       |A              |   15.227|
+DAT_B<7>       |B              |   14.987|
+DAT_B<7>       |C              |   14.901|
+DAT_B<7>       |D              |   14.726|
+DAT_B<7>       |E              |   14.681|
+DAT_B<7>       |F              |   14.642|
+DAT_B<7>       |G              |   14.671|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Nov 04 17:17:30 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shift_state_drc.vf
+// /___/   /\     Timestamp : 11/04/2020 14:34:29
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog shift_state_drc.vf -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/shift_state.sch"
+//Design Name: shift_state
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module shift_state(A, 
+                   O);
+
+    input [7:0] A;
+   output [7:0] O;
+   
+   wire XLXN_26;
+   wire XLXN_28;
+   
+   AND2  XLXI_9 (.I0(XLXN_28), 
+                .I1(A[0]), 
+                .O(O[1]));
+   AND2  XLXI_10 (.I0(XLXN_28), 
+                 .I1(A[1]), 
+                 .O(O[2]));
+   AND2  XLXI_11 (.I0(XLXN_28), 
+                 .I1(A[2]), 
+                 .O(O[3]));
+   AND2  XLXI_12 (.I0(XLXN_28), 
+                 .I1(A[3]), 
+                 .O(O[4]));
+   AND2  XLXI_13 (.I0(XLXN_28), 
+                 .I1(A[4]), 
+                 .O(O[5]));
+   AND2  XLXI_14 (.I0(XLXN_28), 
+                 .I1(A[5]), 
+                 .O(O[6]));
+   AND2  XLXI_15 (.I0(XLXN_28), 
+                 .I1(A[6]), 
+                 .O(O[7]));
+   AND2  XLXI_16 (.I0(XLXN_26), 
+                 .I1(XLXN_28), 
+                 .O(O[0]));
+   GND  XLXI_17 (.G(XLXN_26));
+   VCC  XLXI_18 (.P(XLXN_28));
+endmodule

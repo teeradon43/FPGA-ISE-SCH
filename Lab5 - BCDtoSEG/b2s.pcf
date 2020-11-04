@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Oct 08 14:35:49 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "b_7seg" LOCATE = SITE "P40" LEVEL 1;
+COMP "Set_0" LOCATE = SITE "P62" LEVEL 1;
+COMP "Set_1" LOCATE = SITE "P66" LEVEL 1;
+COMP "f_7seg" LOCATE = SITE "P29" LEVEL 1;
+COMP "c_7seg" LOCATE = SITE "P35" LEVEL 1;
+COMP "Clock" LOCATE = SITE "P51" LEVEL 1;
+COMP "g_7seg" LOCATE = SITE "P27" LEVEL 1;
+COMP "d_7seg" LOCATE = SITE "P34" LEVEL 1;
+COMP "a_7seg" LOCATE = SITE "P41" LEVEL 1;
+COMP "KCom_7seg" LOCATE = SITE "P44" LEVEL 1;
+COMP "e_7seg" LOCATE = SITE "P32" LEVEL 1;
+SCHEMATIC END;
+

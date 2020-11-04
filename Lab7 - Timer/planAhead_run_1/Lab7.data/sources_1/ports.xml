@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="CLK" Dir="IN"/>
+		<Port Id="Reset" Dir="IN"/>
+		<Port Id="Start_Stop" Dir="IN"/>
+		<Port Id="common0" Dir="OUT"/>
+		<Port Id="common1" Dir="OUT"/>
+		<Port Id="common2" Dir="OUT"/>
+		<Port Id="common3" Dir="OUT"/>
+		<Port Id="SEG_A" Dir="OUT"/>
+		<Port Id="SEG_B" Dir="OUT"/>
+		<Port Id="SEG_C" Dir="OUT"/>
+		<Port Id="SEG_D" Dir="OUT"/>
+		<Port Id="SEG_E" Dir="OUT"/>
+		<Port Id="SEG_F" Dir="OUT"/>
+		<Port Id="SEG_G" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

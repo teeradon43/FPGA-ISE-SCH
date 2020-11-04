@@ -1,0 +1,49 @@
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/lab06sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab06sch.ucf -p xc6slx9-tqg144-3 "lab06sch.ngc" lab06sch.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab06sch_map.ncd lab06sch.ngd lab06sch.pcf 
+par -w -intstyle ise -ol high -mt off lab06sch_map.ncd lab06sch.ncd lab06sch.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab06sch.twx lab06sch.ncd -o lab06sch.twr lab06sch.pcf -ucf lab06sch.ucf 
+bitgen -intstyle ise -f lab06sch.ut lab06sch.ncd 

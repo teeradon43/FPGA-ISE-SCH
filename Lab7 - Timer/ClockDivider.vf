@@ -1,0 +1,233 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ClockDivider.vf
+// /___/   /\     Timestamp : 11/03/2020 00:39:23
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/ClockDivider.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/ClockDivider.sch"
+//Design Name: ClockDivider
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_ClockDivider(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module jkCounter0to9_MUSER_ClockDivider(CLK_IN, 
+                                        CLR, 
+                                        A, 
+                                        B, 
+                                        C, 
+                                        D);
+
+    input CLK_IN;
+    input CLR;
+   output A;
+   output B;
+   output C;
+   output D;
+   
+   wire XLXN_8;
+   wire XLXN_15;
+   wire XLXN_17;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_50;
+   wire XLXN_52;
+   wire A_DUMMY;
+   wire B_DUMMY;
+   wire C_DUMMY;
+   wire D_DUMMY;
+   
+   assign A = A_DUMMY;
+   assign B = B_DUMMY;
+   assign C = C_DUMMY;
+   assign D = D_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_ClockDivider  XLXI_1 (.C(CLK_IN), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_8), 
+                                     .K(XLXN_8), 
+                                     .Q(A_DUMMY));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_ClockDivider  XLXI_2 (.C(CLK_IN), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_15), 
+                                     .K(XLXN_15), 
+                                     .Q(B_DUMMY));
+   (* HU_SET = "XLXI_3_2" *) 
+   FJKC_HXILINX_ClockDivider  XLXI_3 (.C(CLK_IN), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_47), 
+                                     .K(XLXN_47), 
+                                     .Q(C_DUMMY));
+   (* HU_SET = "XLXI_4_3" *) 
+   FJKC_HXILINX_ClockDivider  XLXI_4 (.C(CLK_IN), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_50), 
+                                     .K(XLXN_52), 
+                                     .Q(D_DUMMY));
+   INV  XLXI_5 (.I(D_DUMMY), 
+               .O(XLXN_17));
+   VCC  XLXI_7 (.P(XLXN_8));
+   AND2  XLXI_8 (.I0(XLXN_17), 
+                .I1(A_DUMMY), 
+                .O(XLXN_15));
+   AND2  XLXI_9 (.I0(B_DUMMY), 
+                .I1(A_DUMMY), 
+                .O(XLXN_47));
+   AND2  XLXI_10 (.I0(B_DUMMY), 
+                 .I1(A_DUMMY), 
+                 .O(XLXN_48));
+   AND2  XLXI_11 (.I0(C_DUMMY), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_50));
+   AND2  XLXI_12 (.I0(A_DUMMY), 
+                 .I1(D_DUMMY), 
+                 .O(XLXN_52));
+endmodule
+`timescale 1ns / 1ps
+
+module clkDiv10_MUSER_ClockDivider(clk_in, 
+                                   clk_out);
+
+    input clk_in;
+   output clk_out;
+   
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_13;
+   wire XLXN_16;
+   
+   jkCounter0to9_MUSER_ClockDivider  XLXI_1 (.CLK_IN(clk_in), 
+                                            .CLR(XLXN_2), 
+                                            .A(XLXN_5), 
+                                            .B(XLXN_6), 
+                                            .C(XLXN_7), 
+                                            .D(XLXN_8));
+   GND  XLXI_2 (.G(XLXN_2));
+   XNOR2  XLXI_3 (.I0(XLXN_6), 
+                 .I1(XLXN_5), 
+                 .O(XLXN_9));
+   XNOR2  XLXI_4 (.I0(XLXN_8), 
+                 .I1(XLXN_7), 
+                 .O(XLXN_10));
+   AND2  XLXI_5 (.I0(XLXN_10), 
+                .I1(XLXN_9), 
+                .O(XLXN_13));
+   AND2  XLXI_6 (.I0(clk_in), 
+                .I1(XLXN_13), 
+                .O(XLXN_16));
+   FD_1 #( .INIT(1'b0) ) XLXI_8 (.C(clk_in), 
+                .D(XLXN_16), 
+                .Q(clk_out));
+endmodule
+`timescale 1ns / 1ps
+
+module clkDiv2_MUSER_ClockDivider(clk_in, 
+                                  clk_out);
+
+    input clk_in;
+   output clk_out;
+   
+   wire XLXN_2;
+   wire clk_out_DUMMY;
+   
+   assign clk_out = clk_out_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(clk_in), 
+              .D(XLXN_2), 
+              .Q(clk_out_DUMMY));
+   INV  XLXI_2 (.I(clk_out_DUMMY), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module ClockDivider(CLK_20MHz, 
+                    CLK_1Hz, 
+                    CLK_100Hz);
+
+    input CLK_20MHz;
+   output CLK_1Hz;
+   output CLK_100Hz;
+   
+   wire XLXN_73;
+   wire XLXN_74;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_81;
+   wire XLXN_83;
+   wire CLK_100Hz_DUMMY;
+   
+   assign CLK_100Hz = CLK_100Hz_DUMMY;
+   clkDiv10_MUSER_ClockDivider  XLXI_62 (.clk_in(CLK_100Hz_DUMMY), 
+                                        .clk_out(XLXN_73));
+   clkDiv10_MUSER_ClockDivider  XLXI_63 (.clk_in(XLXN_73), 
+                                        .clk_out(XLXN_74));
+   clkDiv10_MUSER_ClockDivider  XLXI_64 (.clk_in(XLXN_74), 
+                                        .clk_out(XLXN_79));
+   clkDiv10_MUSER_ClockDivider  XLXI_65 (.clk_in(XLXN_76), 
+                                        .clk_out(XLXN_83));
+   clkDiv10_MUSER_ClockDivider  XLXI_66 (.clk_in(XLXN_83), 
+                                        .clk_out(XLXN_78));
+   clkDiv10_MUSER_ClockDivider  XLXI_67 (.clk_in(CLK_20MHz), 
+                                        .clk_out(CLK_100Hz_DUMMY));
+   clkDiv10_MUSER_ClockDivider  XLXI_68 (.clk_in(XLXN_75), 
+                                        .clk_out(XLXN_76));
+   clkDiv10_MUSER_ClockDivider  XLXI_70 (.clk_in(XLXN_79), 
+                                        .clk_out(XLXN_75));
+   clkDiv2_MUSER_ClockDivider  XLXI_72 (.clk_in(XLXN_81), 
+                                       .clk_out(CLK_1Hz));
+   clkDiv10_MUSER_ClockDivider  XLXI_73 (.clk_in(XLXN_78), 
+                                        .clk_out(XLXN_81));
+endmodule

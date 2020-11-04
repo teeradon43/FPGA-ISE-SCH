@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym counter0099 {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/counter0099.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/counter0099.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym counter0099 {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/counter0099.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/counter0099.sym} 

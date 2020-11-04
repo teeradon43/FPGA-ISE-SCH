@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Nov 04 13:03:01 2020
+# Process ID: 15472
+# Log file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/planAhead_run_1/planAhead.log
+# Journal file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1

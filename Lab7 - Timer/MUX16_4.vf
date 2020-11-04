@@ -1,0 +1,208 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUX16_4.vf
+// /___/   /\     Timestamp : 11/02/2020 22:11:53
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/MUX16_4.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/MUX16_4.sch"
+//Design Name: MUX16_4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_MUX16_4(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module twoBitCounter_MUSER_MUX16_4(CLK_IN, 
+                                   OUT0, 
+                                   OUT1);
+
+    input CLK_IN;
+   output OUT0;
+   output OUT1;
+   
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire OUT0_DUMMY;
+   
+   assign OUT0 = OUT0_DUMMY;
+   (* HU_SET = "XLXI_1_26" *) 
+   FTC_HXILINX_MUX16_4  XLXI_1 (.C(CLK_IN), 
+                               .CLR(XLXN_8), 
+                               .T(XLXN_11), 
+                               .Q(OUT0_DUMMY));
+   (* HU_SET = "XLXI_2_27" *) 
+   FTC_HXILINX_MUX16_4  XLXI_2 (.C(XLXN_4), 
+                               .CLR(XLXN_8), 
+                               .T(XLXN_11), 
+                               .Q(OUT1));
+   VCC  XLXI_3 (.P(XLXN_11));
+   INV  XLXI_4 (.I(OUT0_DUMMY), 
+               .O(XLXN_4));
+   INV  XLXI_9 (.I(XLXN_11), 
+               .O(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX4B2S_MUSER_MUX16_4(A, 
+                             B, 
+                             C, 
+                             D, 
+                             S0, 
+                             S1, 
+                             Q);
+
+    input A;
+    input B;
+    input C;
+    input D;
+    input S0;
+    input S1;
+   output Q;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   AND3  XLXI_1 (.I0(XLXN_16), 
+                .I1(XLXN_15), 
+                .I2(A), 
+                .O(XLXN_1));
+   AND3  XLXI_2 (.I0(XLXN_16), 
+                .I1(S0), 
+                .I2(B), 
+                .O(XLXN_2));
+   AND3  XLXI_3 (.I0(S1), 
+                .I1(XLXN_15), 
+                .I2(C), 
+                .O(XLXN_3));
+   AND3  XLXI_4 (.I0(S1), 
+                .I1(S0), 
+                .I2(D), 
+                .O(XLXN_4));
+   OR4  XLXI_5 (.I0(XLXN_4), 
+               .I1(XLXN_3), 
+               .I2(XLXN_2), 
+               .I3(XLXN_1), 
+               .O(Q));
+   INV  XLXI_6 (.I(S0), 
+               .O(XLXN_15));
+   INV  XLXI_7 (.I(S1), 
+               .O(XLXN_16));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX16_4(A0, 
+               A1, 
+               A2, 
+               A3, 
+               B0, 
+               B1, 
+               B2, 
+               B3, 
+               CLK_IN, 
+               C0, 
+               C1, 
+               C2, 
+               C3, 
+               D0, 
+               D1, 
+               D2, 
+               D3, 
+               Q0, 
+               Q1, 
+               Q2, 
+               Q3);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CLK_IN;
+    input C0;
+    input C1;
+    input C2;
+    input C3;
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_23;
+   wire XLXN_24;
+   
+   twoBitCounter_MUSER_MUX16_4  XLXI_7 (.CLK_IN(CLK_IN), 
+                                       .OUT0(XLXN_23), 
+                                       .OUT1(XLXN_24));
+   MUX4B2S_MUSER_MUX16_4  XLXI_21 (.A(A0), 
+                                  .B(B0), 
+                                  .C(C0), 
+                                  .D(D0), 
+                                  .S0(XLXN_23), 
+                                  .S1(XLXN_24), 
+                                  .Q(Q0));
+   MUX4B2S_MUSER_MUX16_4  XLXI_22 (.A(A1), 
+                                  .B(B1), 
+                                  .C(C1), 
+                                  .D(D1), 
+                                  .S0(XLXN_23), 
+                                  .S1(XLXN_24), 
+                                  .Q(Q1));
+   MUX4B2S_MUSER_MUX16_4  XLXI_23 (.A(A2), 
+                                  .B(B2), 
+                                  .C(C2), 
+                                  .D(D2), 
+                                  .S0(XLXN_23), 
+                                  .S1(XLXN_24), 
+                                  .Q(Q2));
+   MUX4B2S_MUSER_MUX16_4  XLXI_24 (.A(A3), 
+                                  .B(B3), 
+                                  .C(C3), 
+                                  .D(D3), 
+                                  .S0(XLXN_23), 
+                                  .S1(XLXN_24), 
+                                  .Q(Q3));
+endmodule

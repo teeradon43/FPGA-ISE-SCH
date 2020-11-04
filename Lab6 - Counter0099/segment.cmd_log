@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan6 -refsym segment {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sym} 
+sch2sym -intstyle ise -family spartan6 -refsym segment {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym segment {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sym} 
+sch2hdl -intstyle ise -family spartan6 -verilog segment.vf -w {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} 
+sch2verilog -intstyle ise -family spartan6 -tionly {} -tiext tfi -w {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} segment.tfi 
+sch2sym -intstyle ise -family spartan6 -w -refsym segment {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab06/segment.sym} 

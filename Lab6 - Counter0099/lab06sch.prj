@@ -1,0 +1,7 @@
+verilog work "counter.vf"
+verilog work "segment.vf"
+verilog work "mux84.vf"
+verilog work "counter0099.vf"
+verilog work "Comparator.vf"
+verilog work "ClockDivider.vf"
+verilog work "lab06sch.vf"

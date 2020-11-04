@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : stateToggle.vf
+// /___/   /\     Timestamp : 11/02/2020 22:14:29
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/stateToggle.vf" -w "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/stateToggle.sch"
+//Design Name: stateToggle
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module stateToggle(C_IN, 
+                   C_OUT);
+
+    input C_IN;
+   output C_OUT;
+   
+   wire XLXN_3;
+   wire C_OUT_DUMMY;
+   
+   assign C_OUT = C_OUT_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(C_IN), 
+              .D(XLXN_3), 
+              .Q(C_OUT_DUMMY));
+   INV  XLXI_2 (.I(C_OUT_DUMMY), 
+               .O(XLXN_3));
+endmodule

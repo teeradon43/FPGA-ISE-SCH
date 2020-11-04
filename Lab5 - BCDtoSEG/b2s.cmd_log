@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.syr" 
+xst -intstyle ise -ifn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.xst" -ofn "D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab5-2/b2s.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc b2spin.ucf -uc b2s.ucf -p xc6slx9-tqg144-3 "b2s.ngc" b2s.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o b2s_map.ncd b2s.ngd b2s.pcf 
+par -w -intstyle ise -ol high -mt off b2s_map.ncd b2s.ncd b2s.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml b2s.twx b2s.ncd -o b2s.twr b2s.pcf -ucf b2spin.ucf -ucf b2s.ucf 
+bitgen -intstyle ise -f b2s.ut b2s.ncd 

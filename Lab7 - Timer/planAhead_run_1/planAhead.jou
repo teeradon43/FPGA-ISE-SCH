@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Nov 02 22:15:57 2020
+# Process ID: 13164
+# Log file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/planAhead_run_1/planAhead.log
+# Journal file: D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/Lab7/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P123 [get_ports CLK]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports common0]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports common1]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports common2]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports common3]
+endgroup
+startgroup
+set_property package_pin P46 [get_ports Reset]
+endgroup
+set_property package_pin "" [get_ports [list  SEG_A]]
+startgroup
+set_property package_pin P45 [get_ports Start_Stop]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports SEG_A]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports SEG_B]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports SEG_C]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports SEG_D]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports SEG_E]
+endgroup
+set_property package_pin "" [get_ports [list  SEG_G]]
+startgroup
+set_property package_pin P29 [get_ports SEG_F]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports SEG_G]
+endgroup
+save_constraints

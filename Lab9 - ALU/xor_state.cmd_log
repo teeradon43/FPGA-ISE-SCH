@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym xor_state {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/xor_state.sch} {D:/CE/2-1/01076006 Digital System Fundamentals/Lab/lab09/xor_state.sym} 
